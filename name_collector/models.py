@@ -1,11 +1,8 @@
 from django.db import models
 
 
-class Name(models.Model):
+class User(models.Model):
     name = models.CharField(max_length=50)
 
-    def __str__(self):
-        return f'pk: {self.pk} | {self.name}'
-
     class Meta:
-        db_table = 'Names'
+        db_table = 'Users'
